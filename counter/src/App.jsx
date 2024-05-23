@@ -8,7 +8,12 @@ function App() {
     setCounter(counter--);
   };
   const addValue = () => {
-    setCounter(counter++);
+    //setCounter(counter++);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+
     //console.log("clicked", counter);
   };
   return (
