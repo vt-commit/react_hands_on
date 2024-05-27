@@ -8,6 +8,8 @@ function Login() {
   //sending data/prop
   const { setUser } = useContext(UserContext);
 
+  //const { setUser } = useTheme(); //useContext(ThemeContext)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setUser({ username, password });
