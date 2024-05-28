@@ -34,7 +34,17 @@ function App() {
     );
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const todoObj = JSON.parse(localStorage.getItem("todos"));
+
+    if (todoObj && todoObj.length > 0) {
+      setTodos(todoObj);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <TodoProvider
