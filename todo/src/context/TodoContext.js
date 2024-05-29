@@ -16,7 +16,7 @@ toggleComplete: (id) => {}
 })
 
 export const useTodo = ()=>{
-    return useState(TodoContext)
+    return useContext(TodoContext)
 }
 
 export const TodoProvider = TodoContext.Provider

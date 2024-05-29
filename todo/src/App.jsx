@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import { TodoProvider } from "./context";
 import { useEffect } from "react";
+import TodoForm from "./components/TodoForm";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   const [todos, setTodos] = useState([]);
 
-  const addTodos = (todo) => {
+  const addTodo = (todo) => {
     //if we add like this then all values inside todos will be removed and todo will be added
     //setTodos(todo)
     //we get the old array in prevTodo
@@ -55,9 +57,16 @@ function App() {
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">
             Manage Your Todos
           </h1>
-          <div className="mb-4">{/* Todo form goes here */}</div>
+          <div className="mb-4">
+            {/* Todo form goes here */} <TodoForm />
+          </div>
           <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
+            {todos.map((eachTodo) => (
+              <div key={eachTodo.id} className="w-full">
+                <TodoItem todo={eachTodo} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
