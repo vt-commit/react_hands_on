@@ -5,5 +5,9 @@ import Logo from "./Logo"
 import LogoutButton from "./Header/LogoutButton"
 import Button from "./Button";
 import RTE from "./RTE.JSX";
+import Signup from "./Signup";
+import Login from "./Login"
+import PostForm from "./post-form/PostForm"
+import PostCard from "./PostCard"
 
-export {Header,Footer, Container,Logo,LogoutButton,Button,RTE}
+export {Header,Footer, Container,Logo,LogoutButton,Button,RTE,Signup, Login, PostForm, PostCard}
