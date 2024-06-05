@@ -11,13 +11,13 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import Protected from "./components/Protected.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import AllPost from "./pages/AllPost.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import EditPost from "./pages/EditPost.jsx";
 import Post from "./pages/Post.jsx";
+import Protected from "./components/AuthLayout.jsx";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(

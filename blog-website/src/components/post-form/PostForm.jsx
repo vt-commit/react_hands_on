@@ -24,7 +24,7 @@ function PostForm({ post }) {
     //if post exists, update post
     if (post) {
       const file = data.image[0]
-        ? appwriteService.uploadFile(data.image[0])
+        ? await appwriteService.uploadFile(data.image[0])
         : null;
 
       //if new image is uploaded delete old image
